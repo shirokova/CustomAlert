@@ -13,6 +13,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		8567EAF81F67253300FEF866 /* MyCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567EAF61F67253300FEF866 /* MyCustomAlertView.swift */; };
+		8567EAF91F67253300FEF866 /* MyCustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8567EAF71F67253300FEF866 /* MyCustomAlertView.xib */; };
+		8567EAFD1F67308700FEF866 /* JoinGroupAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567EAFC1F67308700FEF866 /* JoinGroupAlertView.swift */; };
+		8567EAFF1F6730E500FEF866 /* JoinGroupAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8567EAFE1F6730E500FEF866 /* JoinGroupAlertView.xib */; };
 		88620AF69944871FB622CA29 /* Pods_CustomAlert_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17F135CB83FC7CE5AF5C6C5 /* Pods_CustomAlert_Example.framework */; };
 		A9CD0020DC23A90893E5E25E /* Pods_CustomAlert_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD9FFE968D1E4F9FD76FA31 /* Pods_CustomAlert_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -29,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		219C2A3AFF8D001775B0CE76 /* Pods-CustomAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlert_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlert_Tests/Pods-CustomAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5E56080B8D90262B43604C54 /* CustomAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CustomAlert.podspec; path = ../CustomAlert.podspec; sourceTree = "<group>"; };
+		5E56080B8D90262B43604C54 /* CustomAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CustomAlert.podspec; path = ../CustomAlert.podspec; sourceTree = "<group>"; };
 		5F619F133F4569C275492ADC /* Pods-CustomAlert_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlert_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlert_Example/Pods-CustomAlert_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CustomAlert_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlert_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +46,15 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6AD22276D28623D364F1454A /* Pods-CustomAlert_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlert_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlert_Example/Pods-CustomAlert_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A907E52D7974329794309B3B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8567EAF61F67253300FEF866 /* MyCustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomAlertView.swift; sourceTree = "<group>"; };
+		8567EAF71F67253300FEF866 /* MyCustomAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomAlertView.xib; sourceTree = "<group>"; };
+		8567EAFC1F67308700FEF866 /* JoinGroupAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinGroupAlertView.swift; sourceTree = "<group>"; };
+		8567EAFE1F6730E500FEF866 /* JoinGroupAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinGroupAlertView.xib; sourceTree = "<group>"; };
+		A907E52D7974329794309B3B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AA6A1A1F75024F967876C923 /* Pods-CustomAlert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlert_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlert_Tests/Pods-CustomAlert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCD9FFE968D1E4F9FD76FA31 /* Pods_CustomAlert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomAlert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F135CB83FC7CE5AF5C6C5 /* Pods_CustomAlert_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomAlert_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5397BF45F4A15FE8C64B4C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F5397BF45F4A15FE8C64B4C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				8567EAFC1F67308700FEF866 /* JoinGroupAlertView.swift */,
+				8567EAF61F67253300FEF866 /* MyCustomAlertView.swift */,
+				8567EAFE1F6730E500FEF866 /* JoinGroupAlertView.xib */,
+				8567EAF71F67253300FEF866 /* MyCustomAlertView.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -215,10 +227,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Z24TE4EN73;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Z24TE4EN73;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -248,8 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8567EAFF1F6730E500FEF866 /* JoinGroupAlertView.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				8567EAF91F67253300FEF866 /* MyCustomAlertView.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,8 +377,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8567EAF81F67253300FEF866 /* MyCustomAlertView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				8567EAFD1F67308700FEF866 /* JoinGroupAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +514,9 @@
 			baseConfigurationReference = 5F619F133F4569C275492ADC /* Pods-CustomAlert_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z24TE4EN73;
 				INFOPLIST_FILE = CustomAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +530,9 @@
 			baseConfigurationReference = 6AD22276D28623D364F1454A /* Pods-CustomAlert_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z24TE4EN73;
 				INFOPLIST_FILE = CustomAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -523,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA6A1A1F75024F967876C923 /* Pods-CustomAlert_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = Z24TE4EN73;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -532,6 +555,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,11 +567,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 219C2A3AFF8D001775B0CE76 /* Pods-CustomAlert_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = Z24TE4EN73;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

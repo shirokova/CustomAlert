@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CustomAlert
 
 class ViewController: UIViewController {
 
@@ -20,5 +21,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showAlert(_ sender: Any) {
+        guard let alertView = Bundle.main.loadNibNamed("MyCustomAlertView", owner: view, options: nil)?[0] as? MyCustomAlertView else {
+            fatalError("Nib doesn't exist")
+        }
+        let alert = CustomAlert(with: alertView)
+        present(alert, animated: true, completion: nil)
+    }
 }
 

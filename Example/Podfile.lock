@@ -1,0 +1,16 @@
+PODS:
+  - CustomAlert (0.1.0)
+
+DEPENDENCIES:
+  - CustomAlert (from `../`)
+
+EXTERNAL SOURCES:
+  CustomAlert:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CustomAlert: bdb8c9dab8eeb0841fa69b8f003b5f2379ca9bec
+
+PODFILE CHECKSUM: 8744f60bac836fe791971895118e532d0e12f399
+
+COCOAPODS: 1.2.1

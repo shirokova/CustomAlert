@@ -1,0 +1,6 @@
+framework module CustomAlert {
+  umbrella header "CustomAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}
