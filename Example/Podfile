@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CustomAlert_Example' do
+  pod 'CustomAlert', :path => '../'
+
+  target 'CustomAlert_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
