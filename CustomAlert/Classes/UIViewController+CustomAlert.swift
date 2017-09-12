@@ -7,7 +7,7 @@
 //
 
 extension UIViewController {
-    public func present(_ customAlertToPresent: CustomAlert, animated flag: Bool, completion: (() -> Swift.Void)? = nil) {
+    public func present<T:UIView>(_ customAlertToPresent: CustomAlert<T>, animated flag: Bool, completion: (() -> Swift.Void)? = nil) {
         let controller = customAlertToPresent.alertController
         controller.providesPresentationContextTransitionStyle = true
         controller.definesPresentationContext = true

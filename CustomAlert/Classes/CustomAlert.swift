@@ -16,11 +16,13 @@ open class CustomAlertView: UIView {
     public weak var delegate: CustomAlertDelegate?
 }
 
-public class CustomAlert {
+public class CustomAlert<T: UIView> {
     let alertController: CustomAlertController
+    public let alertView: T
 
-    public init<T: UIView>(with view: T, viewCenterYOffset: CGFloat = 0) {
+    public init(with view: T, viewCenterYOffset: CGFloat = 0) {
         alertController = CustomAlertController()
+        alertView = view
         alertController.addAlertView(view, centerYOffset: viewCenterYOffset)
         (view as? CustomAlertView)?.delegate = alertController
     }
