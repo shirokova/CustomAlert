@@ -15,12 +15,24 @@ internal class CustomAlertController: UIViewController {
         view.addSubview(alert)
         alert.translatesAutoresizingMaskIntoConstraints = false
 
-        alert.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        alert.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        if #available(iOS 9.0, *) {
+            alert.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
 
         let viewSize = view.bounds.size
         let width = min(viewSize.width-50, alert.bounds.width)
-        alert.widthAnchor.constraint(equalToConstant: width).isActive = true
+        if #available(iOS 9.0, *) {
+            alert.widthAnchor.constraint(equalToConstant: width).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
 
         alertView = alert
     }
