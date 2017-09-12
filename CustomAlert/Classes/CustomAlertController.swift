@@ -11,7 +11,7 @@ import UIKit
 internal class CustomAlertController: UIViewController {
     var alertView: UIView?
 
-    func addAlertView(_ alert: UIView) {
+    func addAlertView(_ alert: UIView, centerYOffset: CGFloat = 0) {
         view.addSubview(alert)
         alert.translatesAutoresizingMaskIntoConstraints = false
 
@@ -21,7 +21,7 @@ internal class CustomAlertController: UIViewController {
             // Fallback on earlier versions
         }
         if #available(iOS 9.0, *) {
-            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -centerYOffset).isActive = true
         } else {
             // Fallback on earlier versions
         }
