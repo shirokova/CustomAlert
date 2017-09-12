@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol CustomAlertDelegate: class {
-    func dismissAlert()
+    func dismissAlert(animated: Bool)
 }
 
 open class CustomAlertView: UIView {
@@ -27,7 +27,7 @@ public class CustomAlert<T: UIView> {
         (view as? CustomAlertView)?.delegate = alertController
     }
 
-    public func dismiss() {
-        alertController.dismissAlert()
+    public func dismiss(animated: Bool = true) {
+        alertController.dismissAlert(animated: animated)
     }
 }

@@ -59,7 +59,7 @@ internal class CustomAlertController: UIViewController {
 }
 
 extension CustomAlertController: CustomAlertDelegate {
-    internal func dismissAlert() {
-        dismiss(animated: true, completion: nil)
+    internal func dismissAlert(animated: Bool = true) {
+        dismiss(animated: animated, completion: nil)
     }
 }

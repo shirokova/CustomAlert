@@ -22,5 +22,6 @@ extension UIViewController {
         win.makeKeyAndVisible()
 
         vc.present(controller, animated: flag, completion: completion)
+        vc.presentedViewController?.removeFromParentViewController()
     }
 }
