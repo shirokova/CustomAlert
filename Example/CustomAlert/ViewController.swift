@@ -9,18 +9,7 @@
 import UIKit
 import CustomAlert
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+final class ViewController: UIViewController {
     @IBAction func showAlert(_ sender: Any) {
         guard let alertView = Bundle.main.loadNibNamed("MyCustomAlertView", owner: view, options: nil)?[0] as? MyCustomAlertView else {
             fatalError("Nib doesn't exist")
