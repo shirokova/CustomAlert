@@ -20,10 +20,11 @@ public class CustomAlert<T: UIView> {
     let alertController: CustomAlertController
     public let alertView: T
 
-    public init(with view: T, viewCenterYOffset: CGFloat = 0) {
+    public init(with view: T, config: CustomAlertConfig = .default) {
         alertController = CustomAlertController()
+        alertController.config = config
         alertView = view
-        alertController.addAlertView(view, centerYOffset: viewCenterYOffset)
+        alertController.addAlertView(view)
         (view as? CustomAlertView)?.delegate = alertController
     }
 
