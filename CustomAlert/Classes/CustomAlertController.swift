@@ -46,7 +46,7 @@ internal class CustomAlertController: UIViewController {
     }
 
     func setupView() {
-        alertView?.layer.cornerRadius = 16
+        alertView?.layer.cornerRadius = config.cornerRadius
         alertView?.clipsToBounds = true
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
     }
