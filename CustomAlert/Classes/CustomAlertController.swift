@@ -26,7 +26,11 @@ internal class CustomAlertController: UIViewController {
             alert.widthAnchor.constraint(equalToConstant: width).isActive = true
 
             if let topOffset = config.verticalOffset {
-                alert.topAnchor.constraint(equalTo: view.topAnchor, constant: topOffset).isActive = true
+                if #available(iOS 11.0, *) {
+                    alert.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topOffset).isActive = true
+                } else {
+                    alert.topAnchor.constraint(equalTo: view.topAnchor, constant: topOffset).isActive = true
+                }
             }
         } else {
             // Fallback on earlier versions
