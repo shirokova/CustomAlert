@@ -5,19 +5,26 @@
 //  Created by Anna Shirokova on 18/12/2018.
 //
 
-import Foundation
+import CoreGraphics
+
+public enum VerticalPosition {
+    case top(offset: CGFloat)
+    case center(topOffset: CGFloat?, centerOffset: CGFloat)
+    case bottom(offset: CGFloat)
+}
 
 public struct CustomAlertConfig {
-    let viewCenterYOffset: CGFloat
     let horizontalOffset: CGFloat
-    let verticalOffset: CGFloat?
     let cornerRadius: CGFloat
+    let verticalPosition: VerticalPosition
 
-    public init(centerYOffset: CGFloat = 0, horizontalOffset: CGFloat = 25, verticalOffset: CGFloat? = nil, cornerRadius: CGFloat = 16) {
-        viewCenterYOffset = centerYOffset
+    public init(
+        horizontalOffset: CGFloat = 25,
+        cornerRadius: CGFloat = 16,
+        verticalPosition: VerticalPosition = .center(topOffset: nil, centerOffset: 0)) {
         self.horizontalOffset = horizontalOffset
-        self.verticalOffset = verticalOffset
         self.cornerRadius = cornerRadius
+        self.verticalPosition = verticalPosition
     }
 
     public static var `default`: CustomAlertConfig {

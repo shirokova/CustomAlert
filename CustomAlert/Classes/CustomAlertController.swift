@@ -16,27 +16,44 @@ internal class CustomAlertController: UIViewController {
         view.addSubview(alert)
         alert.translatesAutoresizingMaskIntoConstraints = false
 
-        if #available(iOS 9.0, *) {
-            alert.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -config.viewCenterYOffset).isActive = true
+        alert.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        configureVerticalConstraints(for: alert)
 
-            let viewSize = view.bounds.size
-            let width = min(viewSize.width-2*config.horizontalOffset, alert.bounds.width)
+        let viewSize = view.bounds.size
+        let width = min(viewSize.width-2*config.horizontalOffset, alert.bounds.width)
 
-            alert.widthAnchor.constraint(equalToConstant: width).isActive = true
-
-            if let topOffset = config.verticalOffset {
-                if #available(iOS 11.0, *) {
-                    alert.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topOffset).isActive = true
-                } else {
-                    alert.topAnchor.constraint(equalTo: view.topAnchor, constant: topOffset).isActive = true
-                }
-            }
-        } else {
-            // Fallback on earlier versions
-        }
+        alert.widthAnchor.constraint(equalToConstant: width).isActive = true
 
         alertView = alert
+    }
+
+    private func configureVerticalConstraints(for alert: UIView) {
+        switch config.verticalPosition {
+        case let .center(topOffset, centerOffset):
+            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -centerOffset).isActive = true
+            guard let topOffset = topOffset else { return }
+            alert.topAnchor.constraint(equalTo: viewTopAnchor, constant: topOffset).isActive = true
+        case let .top(offset):
+            alert.topAnchor.constraint(equalTo: viewTopAnchor, constant: offset).isActive = true
+        case let .bottom(offset):
+            alert.bottomAnchor.constraint(equalTo: viewBottomAnchor, constant: -offset).isActive = true
+        }
+    }
+
+    private var viewBottomAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return view.safeAreaLayoutGuide.bottomAnchor
+        } else {
+            return view.bottomAnchor
+        }
+    }
+
+    private var viewTopAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return view.safeAreaLayoutGuide.topAnchor
+        } else {
+            return view.topAnchor
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
