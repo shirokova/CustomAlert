@@ -18,10 +18,10 @@ extension UIViewController {
         let vc = UIViewController()
         vc.view.backgroundColor = .clear
         win.rootViewController = vc
-        win.windowLevel = UIWindowLevelAlert + 1
+        win.windowLevel = UIWindow.Level.alert + 1
         win.makeKeyAndVisible()
 
         vc.present(controller, animated: flag, completion: completion)
-        vc.presentedViewController?.removeFromParentViewController()
+        vc.presentedViewController?.removeFromParent()
     }
 }

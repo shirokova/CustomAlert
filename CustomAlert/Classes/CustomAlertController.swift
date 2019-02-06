@@ -10,26 +10,28 @@ import UIKit
 
 internal class CustomAlertController: UIViewController {
     var alertView: UIView?
+    var config: CustomAlertConfig = .default
 
-    func addAlertView(_ alert: UIView, centerYOffset: CGFloat = 0) {
+    func addAlertView(_ alert: UIView) {
         view.addSubview(alert)
         alert.translatesAutoresizingMaskIntoConstraints = false
 
         if #available(iOS 9.0, *) {
             alert.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        } else {
-            // Fallback on earlier versions
-        }
-        if #available(iOS 9.0, *) {
-            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -centerYOffset).isActive = true
-        } else {
-            // Fallback on earlier versions
-        }
+            alert.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -config.viewCenterYOffset).isActive = true
 
-        let viewSize = view.bounds.size
-        let width = min(viewSize.width-50, alert.bounds.width)
-        if #available(iOS 9.0, *) {
+            let viewSize = view.bounds.size
+            let width = min(viewSize.width-2*config.horizontalOffset, alert.bounds.width)
+
             alert.widthAnchor.constraint(equalToConstant: width).isActive = true
+
+            if let topOffset = config.verticalOffset {
+                if #available(iOS 11.0, *) {
+                    alert.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topOffset).isActive = true
+                } else {
+                    alert.topAnchor.constraint(equalTo: view.topAnchor, constant: topOffset).isActive = true
+                }
+            }
         } else {
             // Fallback on earlier versions
         }
@@ -44,7 +46,7 @@ internal class CustomAlertController: UIViewController {
     }
 
     func setupView() {
-        alertView?.layer.cornerRadius = 16
+        alertView?.layer.cornerRadius = config.cornerRadius
         alertView?.clipsToBounds = true
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
     }
@@ -52,9 +54,9 @@ internal class CustomAlertController: UIViewController {
     func animateView() {
         guard let alertView = alertView else {return }
         alertView.alpha = 0
-        UIView.animate(withDuration: 0.4, animations: { () -> Void in
+        UIView.animate(withDuration: 0.4) {
             alertView.alpha = 1.0
-        })
+        }
     }
 }
 

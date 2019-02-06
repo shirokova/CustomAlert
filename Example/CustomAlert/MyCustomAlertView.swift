@@ -6,12 +6,10 @@
 //  Copyright © 2017 shirokova. All rights reserved.
 //
 
-import UIKit
 import CustomAlert
 
-
-class MyCustomAlertView: CustomAlertView {
+final class MyCustomAlertView: CustomAlertView {
     @IBAction func tapCloseButton(_ sender: Any) {
-        delegate?.dismissAlert()
+        delegate?.dismissAlert(animated: true)
     }
 }
