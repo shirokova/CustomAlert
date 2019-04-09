@@ -17,12 +17,12 @@ CustomAlert is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CustomAlert'
+pod 'Custom-Alert'
 ```
 
 ## Author
 
-shirokova, anja.shirokova@inloop.eu
+shirokova, anja.shirokova@gmail.com
 
 ## License
 

@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		219C2A3AFF8D001775B0CE76 /* Pods-CustomAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlert_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlert_Tests/Pods-CustomAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5E56080B8D90262B43604C54 /* CustomAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CustomAlert.podspec; path = ../CustomAlert.podspec; sourceTree = "<group>"; };
+		5E56080B8D90262B43604C54 /* Custom-Alert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Custom-Alert.podspec"; path = "../Custom-Alert.podspec"; sourceTree = "<group>"; };
 		5F619F133F4569C275492ADC /* Pods-CustomAlert_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlert_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlert_Example/Pods-CustomAlert_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CustomAlert_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlert_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				5E56080B8D90262B43604C54 /* CustomAlert.podspec */,
+				5E56080B8D90262B43604C54 /* Custom-Alert.podspec */,
 				A907E52D7974329794309B3B /* README.md */,
 				F5397BF45F4A15FE8C64B4C6 /* LICENSE */,
 			);
