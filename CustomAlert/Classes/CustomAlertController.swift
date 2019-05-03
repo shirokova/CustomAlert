@@ -37,6 +37,11 @@ internal class CustomAlertController: UIViewController {
             alert.topAnchor.constraint(equalTo: viewTopAnchor, constant: offset).isActive = true
         case let .bottom(offset):
             alert.bottomAnchor.constraint(equalTo: viewBottomAnchor, constant: -offset).isActive = true
+        case .fill:
+            NSLayoutConstraint.activate([
+                alert.topAnchor.constraint(equalTo: view.topAnchor),
+                alert.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
         }
     }
 
