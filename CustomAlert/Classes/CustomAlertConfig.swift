@@ -11,6 +11,7 @@ public enum VerticalPosition {
     case top(offset: CGFloat)
     case center(topOffset: CGFloat?, centerOffset: CGFloat)
     case bottom(offset: CGFloat)
+    case fill
 }
 
 public struct CustomAlertConfig {
