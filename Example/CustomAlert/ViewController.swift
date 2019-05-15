@@ -15,7 +15,7 @@ final class ViewController: UIViewController {
             fatalError("Nib doesn't exist")
         }
         let alert = CustomAlert(with: alertView)
-        present(alert, animated: true, completion: nil)
+        alert.present()
     }
 }
 

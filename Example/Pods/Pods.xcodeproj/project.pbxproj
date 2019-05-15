@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		32BA7B156312319C3156974D4178CD80 /* CustomAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8840A77DCFB7F8820FB20CE8F42E73F /* CustomAlert-dummy.m */; };
 		3846DCB34036E4048CC68BCC1D2002EE /* Pods-CustomAlert_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A28F257F75CD18D584F2A95A54EF1B /* Pods-CustomAlert_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8567EAFB1F67291300FEF866 /* UIViewController+CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567EAFA1F67291300FEF866 /* UIViewController+CustomAlert.swift */; };
+		8567EAFB1F67291300FEF866 /* CustomAlert+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567EAFA1F67291300FEF866 /* CustomAlert+Present.swift */; };
 		8567EB031F67528000FEF866 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567EB001F67528000FEF866 /* CustomAlert.swift */; };
 		8567EB041F67528000FEF866 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567EB011F67528000FEF866 /* CustomAlertController.swift */; };
 		8D25058320D92870CD80DE4629D70228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -47,7 +47,7 @@
 		7C1707D668D53C3C248C60C5A98CF668 /* Pods-CustomAlert_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomAlert_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7C7EEC3392137287FB9DCD3E797B33CE /* Pods-CustomAlert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomAlert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA42D5366FEEA9E2323861E84A2FD6A /* Pods-CustomAlert_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomAlert_Tests-resources.sh"; sourceTree = "<group>"; };
-		8567EAFA1F67291300FEF866 /* UIViewController+CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomAlert.swift"; sourceTree = "<group>"; };
+		8567EAFA1F67291300FEF866 /* CustomAlert+Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomAlert+Present.swift"; sourceTree = "<group>"; };
 		8567EB001F67528000FEF866 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		8567EB011F67528000FEF866 /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 		8B9A3E68AEAFD4A07116B9AE442E9030 /* Pods-CustomAlert_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CustomAlert_Example.modulemap"; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				8567EB001F67528000FEF866 /* CustomAlert.swift */,
 				8567EB011F67528000FEF866 /* CustomAlertController.swift */,
-				8567EAFA1F67291300FEF866 /* UIViewController+CustomAlert.swift */,
+				8567EAFA1F67291300FEF866 /* CustomAlert+Present.swift */,
 				CD11273F21C90C640030D002 /* CustomAlertConfig.swift */,
 			);
 			path = Classes;
@@ -353,7 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD11274021C90C640030D002 /* CustomAlertConfig.swift in Sources */,
-				8567EAFB1F67291300FEF866 /* UIViewController+CustomAlert.swift in Sources */,
+				8567EAFB1F67291300FEF866 /* CustomAlert+Present.swift in Sources */,
 				8567EB041F67528000FEF866 /* CustomAlertController.swift in Sources */,
 				32BA7B156312319C3156974D4178CD80 /* CustomAlert-dummy.m in Sources */,
 				8567EB031F67528000FEF866 /* CustomAlert.swift in Sources */,

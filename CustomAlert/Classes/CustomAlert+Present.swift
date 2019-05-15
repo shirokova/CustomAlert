@@ -9,11 +9,13 @@
 extension UIViewController {
     @available(iOS, deprecated, message: "Use `public static func present<T:UIView>(_ customAlertToPresent: CustomAlert<T>, animated flag: Bool, completion: (() -> Swift.Void)? = nil)` instead.")
     public func present<T:UIView>(_ customAlertToPresent: CustomAlert<T>, animated flag: Bool, completion: (() -> Swift.Void)? = nil) {
-        UIViewController.present(customAlertToPresent, animated: flag, completion: completion)
+        customAlertToPresent.present(animated: flag, completion: completion)
     }
+}
 
-    public static func present<T:UIView>(_ customAlertToPresent: CustomAlert<T>, animated flag: Bool, completion: (() -> Swift.Void)? = nil) {
-        let controller = customAlertToPresent.alertController
+extension CustomAlert {
+    public func present(animated flag: Bool = true, completion: (() -> Swift.Void)? = nil) {
+        let controller = self.alertController
         controller.providesPresentationContextTransitionStyle = true
         controller.definesPresentationContext = true
         controller.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
