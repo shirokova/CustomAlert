@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Custom-Alert'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = 'Displays custom view as alert.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/shirokova/CustomAlert'
 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'shirokova' => 'anja.shirokova@inloop.eu' }
+  s.author           = { 'shirokova' => 'anja.shirokova@gmail.com' }
   s.source           = { :git => 'https://github.com/shirokova/CustomAlert.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'

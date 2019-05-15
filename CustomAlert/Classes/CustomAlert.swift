@@ -20,6 +20,10 @@ public class CustomAlert<T: UIView> {
     let alertController: CustomAlertController
     public let alertView: T
 
+    public var isPresented: Bool {
+        return alertController.presentingViewController != nil
+    }
+
     public init(with view: T, config: CustomAlertConfig = .default) {
         alertController = CustomAlertController()
         alertController.config = config
