@@ -19,6 +19,8 @@ extension UIViewController {
         controller.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
 
+        controller.previousWindow = UIApplication.shared.keyWindow
+        
         let win = UIWindow(frame: UIScreen.main.bounds)
         let vc = UIViewController()
         vc.view.backgroundColor = .clear
