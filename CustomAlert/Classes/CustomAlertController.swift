@@ -86,7 +86,9 @@ internal class CustomAlertController: UIViewController {
 
 extension CustomAlertController: CustomAlertDelegate {
     internal func dismissAlert(animated: Bool = true) {
-        dismiss(animated: animated, completion: nil)
-        previousWindow?.makeKey()
+        dismiss(animated: animated, completion: { [weak self] in
+            self?.previousWindow?.makeKey()
+            self?.previousWindow = nil
+        })
     }
 }
