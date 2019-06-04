@@ -13,7 +13,7 @@ internal class CustomAlertController: UIViewController {
     var config: CustomAlertConfig = .default
 
     var previousWindow: UIWindow?
-    
+
     func addAlertView(_ alert: UIView) {
         view.addSubview(alert)
         alert.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +43,7 @@ internal class CustomAlertController: UIViewController {
             NSLayoutConstraint.activate([
                 alert.topAnchor.constraint(equalTo: view.topAnchor),
                 alert.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
+                ])
         }
     }
 
@@ -85,10 +85,15 @@ internal class CustomAlertController: UIViewController {
 }
 
 extension CustomAlertController: CustomAlertDelegate {
-    internal func dismissAlert(animated: Bool = true) {
+    internal func dismissAlert(animated: Bool = true, completion: @escaping () -> Void) {
         dismiss(animated: animated, completion: { [weak self] in
             self?.previousWindow?.makeKey()
             self?.previousWindow = nil
+            completion()
         })
+    }
+
+    internal func dismissAlert(animated: Bool = true) {
+        dismissAlert(animated: animated, completion: {})
     }
 }

@@ -10,29 +10,42 @@ import UIKit
 
 public protocol CustomAlertDelegate: class {
     func dismissAlert(animated: Bool)
+    func dismissAlert(animated: Bool, completion: @escaping () -> Void)
 }
 
 open class CustomAlertView: UIView {
     public weak var delegate: CustomAlertDelegate?
 }
 
-public class CustomAlert<T: UIView> {
-    let alertController: CustomAlertController
-    public let alertView: T
+public class CustomAlert {
+    let config: CustomAlertConfig
+    let builder: () -> UIView
+
+    private var alertController: CustomAlertController!
+    var alertView: UIView!
 
     public var isPresented: Bool {
-        return alertController.presentingViewController != nil
+        return alertController?.presentingViewController != nil
     }
 
-    public init(with view: T, config: CustomAlertConfig = .default) {
+    func createAlertController() -> CustomAlertController {
         alertController = CustomAlertController()
-        alertController.config = config
-        alertView = view
-        alertController.addAlertView(view)
-        (view as? CustomAlertView)?.delegate = alertController
+        alertController!.config = config
+        alertView = builder()
+        alertController!.addAlertView(alertView)
+        (alertView as? CustomAlertView)?.delegate = alertController
+        return alertController!
+    }
+
+    public init(config: CustomAlertConfig = .default, builder: @escaping () -> UIView) {
+        self.config = config
+        self.builder = builder
     }
 
     public func dismiss(animated: Bool = true) {
-        alertController.dismissAlert(animated: animated)
+        alertController.dismissAlert(animated: animated) { [weak self] in
+            self?.alertController = nil
+            self?.alertView = nil
+        }
     }
 }

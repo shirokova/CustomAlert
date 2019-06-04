@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Custom-Alert'
-  s.version          = '0.3.5'
+  s.version          = '1.0.0'
   s.summary          = 'Displays custom view as alert.'
 
 # This description is used to generate tags and improve search results.
