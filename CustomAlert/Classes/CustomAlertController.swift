@@ -43,7 +43,7 @@ internal class CustomAlertController: UIViewController {
             NSLayoutConstraint.activate([
                 alert.topAnchor.constraint(equalTo: view.topAnchor),
                 alert.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                ])
+            ])
         }
     }
 
