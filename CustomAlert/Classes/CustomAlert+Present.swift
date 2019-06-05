@@ -6,23 +6,16 @@
 //
 //
 
-extension UIViewController {
-    @available(iOS, deprecated, message: "Use `public static func present<T:UIView>(_ customAlertToPresent: CustomAlert<T>, animated flag: Bool, completion: (() -> Swift.Void)? = nil)` instead.")
-    public func present<T:UIView>(_ customAlertToPresent: CustomAlert<T>, animated flag: Bool, completion: (() -> Swift.Void)? = nil) {
-        customAlertToPresent.present(animated: flag, completion: completion)
-    }
-}
-
 extension CustomAlert {
     public func present(animated flag: Bool = true, completion: (() -> Swift.Void)? = nil) {
-        let controller = self.alertController
+        let controller = createAlertController()
         controller.providesPresentationContextTransitionStyle = true
         controller.definesPresentationContext = true
         controller.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         controller.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
 
         controller.previousWindow = UIApplication.shared.keyWindow
-        
+
         let win = UIWindow(frame: UIScreen.main.bounds)
         let vc = UIViewController()
         vc.view.backgroundColor = .clear

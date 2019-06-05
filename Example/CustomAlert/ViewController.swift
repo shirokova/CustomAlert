@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
         guard let alertView = Bundle.main.loadNibNamed("MyCustomAlertView", owner: view, options: nil)?[0] as? MyCustomAlertView else {
             fatalError("Nib doesn't exist")
         }
-        let alert = CustomAlert(with: alertView)
+        let alert = CustomAlert { alertView }
         alert.present()
     }
 }
