@@ -6,6 +6,8 @@
 //
 //
 
+final class CustomAlertWindow: UIWindow {}
+
 extension CustomAlert {
     public func present(animated flag: Bool = true, completion: (() -> Swift.Void)? = nil) {
         let controller = createAlertController()
@@ -16,7 +18,7 @@ extension CustomAlert {
 
         controller.previousWindow = UIApplication.shared.keyWindow
 
-        let win = UIWindow(frame: UIScreen.main.bounds)
+        let win = CustomAlertWindow(frame: UIScreen.main.bounds)
         let vc = UIViewController()
         vc.view.backgroundColor = .clear
         win.rootViewController = vc

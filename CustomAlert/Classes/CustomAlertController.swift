@@ -11,6 +11,7 @@ import UIKit
 internal class CustomAlertController: UIViewController {
     var alertView: UIView?
     var config: CustomAlertConfig = .default
+    weak var customAlert: CustomAlert?
 
     var previousWindow: UIWindow?
 
