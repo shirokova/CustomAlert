@@ -11,10 +11,15 @@ import UIKit
 internal class CustomAlertController: UIViewController {
     var alertView: UIView?
     var config: CustomAlertConfig = .default
-    weak var customAlert: CustomAlert?
 
     var previousWindow: UIWindow?
 
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        CustomAlert.globalPresentationWindow?.isHidden = true
+        CustomAlert.globalPresentationWindow = nil
+    }
+    
     func addAlertView(_ alert: UIView) {
         view.addSubview(alert)
         alert.translatesAutoresizingMaskIntoConstraints = false

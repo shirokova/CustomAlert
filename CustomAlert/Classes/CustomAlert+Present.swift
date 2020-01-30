@@ -6,8 +6,6 @@
 //
 //
 
-final class CustomAlertWindow: UIWindow {}
-
 extension CustomAlert {
     public func present(animated flag: Bool = true, completion: (() -> Swift.Void)? = nil) {
         let controller = createAlertController()
@@ -18,12 +16,12 @@ extension CustomAlert {
 
         controller.previousWindow = UIApplication.shared.keyWindow
 
-        let win = CustomAlertWindow(frame: UIScreen.main.bounds)
+        CustomAlert.globalPresentationWindow = UIWindow(frame: UIScreen.main.bounds)
         let vc = UIViewController()
         vc.view.backgroundColor = .clear
-        win.rootViewController = vc
-        win.windowLevel = UIWindow.Level.alert + 1
-        win.makeKeyAndVisible()
+        CustomAlert.globalPresentationWindow?.rootViewController = vc
+        CustomAlert.globalPresentationWindow?.windowLevel = UIWindow.Level.alert + 1
+        CustomAlert.globalPresentationWindow!.makeKeyAndVisible()
 
         vc.present(controller, animated: flag, completion: completion)
         vc.presentedViewController?.removeFromParent()
