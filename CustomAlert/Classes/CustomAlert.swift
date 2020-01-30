@@ -21,6 +21,7 @@ public class CustomAlert {
     let config: CustomAlertConfig
     let builder: () -> UIView
 
+    static var globalPresentationWindow: UIWindow?
     private var alertController: CustomAlertController!
     var alertView: UIView!
 
@@ -30,7 +31,6 @@ public class CustomAlert {
 
     func createAlertController() -> CustomAlertController {
         alertController = CustomAlertController()
-        alertController.customAlert = self
         alertController!.config = config
         alertView = builder()
         alertController!.addAlertView(alertView)
@@ -43,29 +43,10 @@ public class CustomAlert {
         self.builder = builder
     }
 
-    public func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
+    public func dismiss(animated: Bool = true) {
         alertController.dismissAlert(animated: animated) { [weak self] in
             self?.alertController = nil
             self?.alertView = nil
-            completion?()
-        }
-    }
-    
-    public static func forceDismissActiveAlerts(completion: @escaping () -> Void) {
-        let alertControllers = UIApplication.shared.windows.compactMap {  $0.rootViewController as? CustomAlertController }
-        guard alertControllers.count > 0 else {
-            completion()
-            return
-        }
-        let group = DispatchGroup()
-        group.notify(queue: .main) {
-            completion()
-        }
-        alertControllers.forEach { alertController in
-            group.enter()
-            alertController.customAlert?.dismiss(animated: false) {
-                group.leave()
-            }
         }
     }
 }
